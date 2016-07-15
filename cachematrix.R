@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Lexical Scoping assignment for R Programming Coursera Course
 
-## Write a short comment describing this function
+## makeCacheMatrix, provides a list of functions getter and setters in order 
+## to provide a cached "class" of it inverse. Inverse matrix is not auto-calculated
+## so it requires from cacheSolve function.
 
 makeCacheMatrix <- function(x = matrix()) {
   s <- NULL
@@ -18,7 +19,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve requires a makeCacheMatrix function, in order to get the inverse of
+## a matrix provided through 'solve' R function. In conjunction these two functions 
+## make sure inverse matrix is only calculated once.
 
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
